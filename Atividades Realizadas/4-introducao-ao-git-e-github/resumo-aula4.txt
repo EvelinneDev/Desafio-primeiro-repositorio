@@ -1,0 +1,29 @@
+Git e Github
+
+O Git é um sistema de versionamento de código concluído.
+Criador: Linus Torvalds(criou devido ao desgosto de usar outros sistemas de versionamento existentes. ex:Kernel)
+
+Github
+
+Repositório online de códigos. Funciona também como uma espécie de rede social.
+vantagens em utilizar:
+1- Controle de versão
+2- Armazenamento em nuvem
+3- Trabalho em Equipe
+4- Melhoras seu código
+5- Reconhecimento 
+
+Link de estudo complementar youtube:
+
+Rafa Ballerini: 
+
+-Como Usar Git e Github na Prática
+https://www.youtube.com/watch?v=UBAX-13g8OM&t=1932s
+
+-O que é Git e Github?
+https://www.youtube.com/watch?v=DqTITcMq68k
+
+Dev Aprender:
+
+-Curso de Git e Github COMPLETO 2021 [Iniciantes] + Desafios + Muita Prática
+https://www.youtube.com/watch?v=kB5e-gTAl_s&t=2356s

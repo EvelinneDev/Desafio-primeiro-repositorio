@@ -1,0 +1,81 @@
+Lógica de Programação Essencial
+
+Programar: Lógica e habilidade para resolver problemas.
+Lógica: Coerência de raciocínio, de ideias. Sequência coerente.
+Lógica de programação: Contextualizar a lógica na programação de computadores, buscando a melhor sequência de ações para solucionar um problema.
+
+Metacognição: "Pensar como você pensa"
+Abstração: Habilidade de concentrar nos aspectos essenciais de um contexto qualquer, ignorando caracteristicas menos importantes ou acidentais. (Desenvolver em partes)
+
+Algoritmos e pseudocódigos
+
+Algoritmo: Sequência de passos para resolver um problema.
+Exemplo:
+	início-manhã
+	acordei
+	levantei da cama
+	troquei de roupa
+	...
+	fim-manhã
+
+Site para iniciantes de programação exercitarem algoritmos:
+site: studio.code.br
+jogo: "Hora do código Minecraft"
+
+Pseudocódigo: Forma genérica de escrever um algoritmo, utilizando uma linguagem simples.
+
+praticar:
+site: proprofs.com/games/wolf-sheep-and-cabbage
+site2: rachacuca.com.br/jogos/pinguins-numa-fria
+
+Fluxograma, Variáveis e Constantes
+
+Fluxograma: Ferramenta utilizada para representar graficamente o algoritmo. 
+
+Um tipo de diagrama esquemático, com figuras que representam:
+Processo, Decisão, Terminal, Documento,
+Vários documentos, Preparação, Dados, Base de dados, Display
+
+Variável: É um objeto (uma posição) frequentemente localizada na memória. Capaz de reter e representar um valor ou expressão.
+-Numéricas
+-Caracteres
+-Alfanuméricas
+-Lógicas
+
+Constante: Valores imutáveis, não são alterados durante a vida útil do programa.
+
+Estrutura de repetição: Executa mais de uma vez o mesmo comando.
+
+Linguagem de programação:
+-Alto nível: São aquelas cuja sintaxe se aproxima mais da nossa linguagem e se distanciam mais da linguagem da máquina. (C, PHP, JavaScript)
+-Baixo nível: Aquela que se aproxima da linguagem da máquina. (Assembly)
+
+-Compiladas: Código fonte é executado diretamente pelo sistema operacional.(Após ser trazido pela compilação)
+-Interpretadas: Código executado por um programa de computador.
+
+Portugol
+
+É uma pseudolinguagem
+
+Desvios Condicionais
+-SE: A condição a ser testada entre parênteses e as instruções que devem ser executadas entre chaves caso o desvio seja verdadeiro.
+ex:
+se(media>=7){
+escreva("Parabéns, aprovado!)
+}
+
+-SE-SENÃO: Se a condição for falsa
+ex:
+senão{
+escreva("Você foi reprovado!")
+
+Laços de repetição: Permite executar mais de uma vez o mesmo comando.
+Matriz: É uma coleção de variáveis do mesmo tipo, acessíveis com um único nome e armazenados contiguamente na memória.
+A individualização de cada variável de um vetor é feita através do uso de índices.
+Vetores: São matrizes de uma só dimensão.
+
+
+
+
+
+

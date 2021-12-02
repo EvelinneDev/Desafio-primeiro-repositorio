@@ -1,0 +1,63 @@
+Estrutura de Dados e Algoritmos
+
+Estrutura de dados: Estrutura organizada de dados na memória de um computador ou em qualquer dispositivo de armazenamento, de forma que os dados possam ser utilizados de forma correta.
+
+Encontram muiotas aplicações no desnvolvimento de sistemas. (alguns altamente especializados e utilizados em tarefas específicas)
+
+Usando as estruturas adequadas através de algoritmos, podemos trabalhar com uma grande quantidade de dados, como aplicações em bancos de dados ou serviços de busca.
+
+Algoritmo: Conjunto de ações estruturadas
+-Inserir dados
+-Excluir dados
+-Localizar um elemento
+-Percorrer itens
+-Classificar
+
+Principais Estruturas de Dados
+
+Vetores e Matrizes: Ou arrays são estruturas de dados simples que podem auxiliar quando há muitas variáveis do mesmo tipo em um algoritmo.
+Vetor ou array uni-dimensional é uma variável que armazena várias variáveis do mesmo tipo.
+O vetor é uma estrutura de dados indexada, que pode armazenar uma determinada quantidade de valores do mesmo tipo.
+Matriz ou array multi-dimensional é um vetor de vetores. (Que possui duas ou mais dimensões)
+[2][5][1]
+[1][4][2]
+[6][3][4]
+
+Registros: Estrutura que oferece um formato especializado para armazenar informações em memória.
+Permite armazenar mais de um tipo de dado.
+
+Operador(.) *ponto
+ex: Para acessar o preço de um livro, poderíamos utilizar a seguinte declaração:
+livro.preco
+
+Listas: Armazena dados de um determinado tipo em uma ordem específica.
+lista(tamanho ajustável) é diferente de array(tamanho fixo)
+-listas ligadas:
+Os nós são amarrados com essa indicação de qual é o próximo nó.
+-duplamente ligadas:
+Permite navegação reversa. Os nós sabem quem é o o elemento anteiror e posterior.
+
+Pilhas: É uma estrutura que serve como coleçao de elementos. Permite acesso a SOMENTE UM item de dados armazenados.
+O acesso aos itens de uma pilha é RESTRITO, somente um item pode ser lido ou removido por vez.
+
+LIPO ou UEPS:
+last in, first out
+último que entra, primeiro que sai
+
+FIFO ou PEPS:
+first in, first out
+primeiro que entra, primeiro que sai
+
+Filas: Admite remoção de elementos e inserção de novos, sujeito à seguinte regra de operação:
+O elemento removido é o que está na estrutura há mais tempo. (Segue o conceito FIFO)
+
+Estrutura de Dados
+
+Árvore: Estrutura de dados que organiza seus elementos de forma hierárquica. Onde existe um elemento que fica na basa da árvore, chamado de raiz, e existem os elementos subordinados à eles(Nós ou Folhas)
+Tabela Hash: Tabela hash, de dispersão ou espalhamento é uma estrutura de dados especial, que associa chaves de pesquisa a valores.
+Hashing: Função que espalha os elementos, fazendo com que os mesmo fiquem desordenados dentro do "array" que define a tabela.
+Valores: Posição ou índice onde o elemento se encontra.
+Chave: Parte da informação que compõe o elemento a ser manipulado.
+Grafo: São estruturas que permitem programar a relação entre objetos.
+Os objetos são vértices ou "nós" do grafo.
+Os relacionamentos são arestas.

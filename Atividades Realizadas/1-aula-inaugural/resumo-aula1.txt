@@ -1,0 +1,6 @@
+A aula inaugural foi Mentoria ralizada através de uma live.
+Na aula foi explicado como funciona o processo de bootcamp, foram abordados tópicos como:
+-Cursos
+-Mentorias
+-Projetos
+-Desafios de códigos
