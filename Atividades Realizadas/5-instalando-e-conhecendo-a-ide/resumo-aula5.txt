@@ -1,0 +1,49 @@
+Instalando e Conhecendo a IDE
+
+Link para download do Visual Studio:
+https://visualstudio.microsoft.com/pt-br/downloads
+
+"Por que aprender Visual Studio? O Visual Studio permite que você conclua todo o ciclo de desenvolvimento em um único lugar.
+Por exemplo, você pode editar, depurar, testar, controlar a versão e implantar na nuvem.
+Com a diversidade de recursos e linguagens no Visual Studio,
+você pode ir de escrever seu primeiro trecho de código a desenvolver em vários tipos de projeto.
+Por exemplo, você pode criar aplicativos de área de trabalho e Web com aplicativos .NET, móveis e de jogos com C++." Visual Studio
+
+Após a instalação do Visual Studio instalamos também as cargas de trabalho
+(não é necessário instalar todas, já que são pesadas e podem ser instaladas a qualquer momento.
+instalar:
+-Desenvolvimento para desktop com .NET
+
+Gerando código e debugging
+Objetivos:
+-Geração de Código
+introdução>Criar um projeto
+
+-Inspeção de código
+A inspeção deve ser feita na depuração.
+Pode ser feita passando o cursor de mouse por cima da variável ou abrindo a janela QuickWatch pelo menu Depurar.
+-Debugging
+
+A depuração é feita quando é colocado um breakpoint no código e ele é executado.
+É possível navegar pelo código no depurador usando comandos.
+
+Integração com Git e Github
+
+Clonar um repositório>digitar url
+Caso o projeto não esteja associado ao Git, podemos criar um repositório novo no menu Git> Criar um repositório Git.
+Depois de clonar ou criar um repositório, é possível acessá-lo no menu Git . Repositórios Locias.
+
+Criar o repositório pelo VS
+Git> Criar um repositório Git
+inicializar um repositório Git local > indicar caminho local > criar um repositório Github
+
+Criando testes
+Para criar um teste, devemos clicar no método que vai ser testado com o botão direito e então em criar testes de unidade.
+Vai ser criado um novo projeto dentro da solução com o arquivo de teste, cada método deve ser configurado com o padrão AAA.
+- A seção Organizar(Arrange) de um método de teste de unidade inicializa os objetos e define o valor dos dados que são passados
+ para o método sendo testado.
+- A seção Agir(Act) invoca o método sendo testado com os parâmetros organizados.
+- A seção Declarar(Assert) verifica se a ação do método em teste se comporta conforme o esperado.
+
+Documentação para Visual Studio:
+https://docs.microsoft.com/pt-br/visualstudio/windows/?view=vs-2019
