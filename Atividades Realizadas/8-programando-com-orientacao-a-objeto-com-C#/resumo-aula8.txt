@@ -1,0 +1,170 @@
+Programando com Orientação a Objeto com C#
+
+Conhecendo a POO
+
+-A POO é um paradigma de programação, ou seja, corresponde a uma técnica de programação
+ para um fim específico.
+
+-Aproxima do mundo real
+
+-Dentro dessa técnica existem 4 pilares:
+	Abstração
+	Encapsulamento
+	Herança
+	Polimorfismo
+
+-O principal conceito de POO são classes e objetos!
+
+ex:
+Classe: um molde de uma pessoa
+Objeto: a pessoa em si
+
+
+Paradigma
+
+-Paradigma de programação é diferente de linguagem de programação.
+-Uma linguagem de programação implementa um ou mais paradigmas.
+-Um paradigma nada mais é do que um modelo de técnicas, estruturas
+e formas de solucionar um problema.
+
+Tipos de Paradigmas
+
+-Programação orientada a objetos (é o que estamos estudando!)
+-Programação estruturada
+-Programação imperativa
+-Programação procedural
+-Programação orientada a eventos
+-Programação lógica...
+
+Link: https://docs.microsoft.com/pt-br/dotnet/csharp/fundamentals/tutorials/oop
+
+
+Abstração
+
+-Abstrair um objeto do mundo real para um contexto específico,
+considerando apenas os atributos importantes.
+
+
+Encapsulamento
+
+-Serve para proteger uma classe e definir limites para alteração de
+ suas propriedades.
+ 
+- Serve para ocultar seu comportamento e expor somente o necessário.
+
+
+Herança
+
+- A herança nos permite reutilizar atributos, métodos e comportamentos
+ de uma classe em outras classes.
+
+- Serve para agrupar objetos que são do mesmo tipo, porém com características
+ diferentes.
+
+
+Polimorfismo
+
+- Vem do grego "Muitas formas"
+
+- Com o polimorfismo, podemos sobescrever métodos das classes
+ filhas para que se comportem de maneira diferente e ter sua própria implementação.
+
+tipos: 
+- Tempo de compilação (sobrecarga de métodos/overload/ealry biding)
+- Tempo de execução(override/ late binding)
+
+* virtual(o método pode ser sobescrito)
+*override
+
+
+Classes abstratas
+
+- Uma classe abstrata tem como objetivo ser exclusivamente um modelo para ser herdado,
+ portanto não pode ser instanciada.
+
+- Você pode implementar métodos ou deixa-los a cargo de quem herdar.
+
+
+Classe selada
+
+- Uma classe selada tem como objetivo de impedir que outras classes façam
+uma herança dela, ou seja, nenhuma classe pode ser sua derivada.
+
+
+- Também existem métodos e propriedades seladas.
+
+
+
+Classe Object
+
+- A classe System.Object é a mãe de todas as classes na hierarquia do .NET.
+
+- Todas as classes derivam, direta ou indiretamente da classe Object,
+e ela tem como objetivo prover serviços de baixo nível para suas classes filhas.
+
+Métodos: 
+ 
+equals(object)
+equals(object,object)
+finalize()
+GetHashCode()
+GetType()
+MemberWiseClone()
+ReferenceEquals(Object, Object)
+ToString()
+
+
+Interfaces
+
+- Interface é um contrato que pode ser implementado  por uma classe.
+
+- É como se fosse uma classe abstrata, podendo definir métodos abstratos
+para serem implementados.
+
+- Assim como uma classe abstrata, uma interface não pode ser instanciada.
+
+
+Arquivo
+
+- O C# nos apresenta algumas classes estáticas que facilitam o trabalho com arquivos, dentre elas:
+
+-file (manipular arquivos)
+-directory
+-path (organizar os caminhos de maneira lógica)
+
+Listar diretórios
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
