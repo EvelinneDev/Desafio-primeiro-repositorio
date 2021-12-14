@@ -1,0 +1,108 @@
+[.NET] Criando ambiente de desenvolvimento
+
+dotnet 
+
+.NET Framework:
+
+-ano:2002
+-web
+-windows
+
+
+.NET Core:
+
+-ano: 2016
+-web
+-windows
+-linux
+-macOS
+
+
+.NET Standard
+
+-bibliotecas de classe base
+
+
+.NET 5
+-Ano: 2020
+-Plataforma unificada
+-Dekstop
+-web
+-cloud
+-mobile
+-gaming
+-iot
+-ai
+
+Para saber mais:
+- NET Core/5 vs NET Framework
+- Quais são as diferenças entre .NET Core e .NET Framework
+- .NET Core e .NET Standard: Qual a diferença.
+
+
+Framework
+
+- "Pensar numa caixa de ferrementa pronta que posso usar do 
+jeito que bem entender."
+
+
+Runtime
+C# --> CIL code --> CLR --> Native code
+
+para saber mais:
+- visão geral so clr (common language runtime)
+- sobre o common language runtime.
+
+
+Conhecendo o CLI do .NET
+- CLI (Command-Line Interface)
+- ILC (Interface de Linha de Comando)
+
+- "caixa preta em que se coloca o comando"
+- Processa os comandos que serão enviados para um programa de computador
+na forma de linhas de texto.
+
+Na prática:
+
+prompt de comando > 
+
+dotnet --version ( mostrar a versão dotnet utilizada)
+dotnet --help (vai mostrar todos os comandos que são utilizados no dotnet)
+
+Comandos básicos
+
+dotnet --info (traz informações de versão do dotnet)
+dotnet new (criar projeto)
+dotnet new --list --tag web (filtrar só para opções relacionadas a web)
+dotnet new console -o myApp (cria uma pasta)
+cd (acessar o diretório)
+dotnet build (vai compilar o projeto)
+dotnet run (roda o dotnet)
+dotnet restore (restauração dos projetos)
+
+O que é CLI
+Visão Geral CLI do .NET
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
