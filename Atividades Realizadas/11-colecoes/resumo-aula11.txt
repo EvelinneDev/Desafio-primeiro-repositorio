@@ -1,0 +1,195 @@
+Coleções
+
+-Para muitos aplicativos, você desejará criar e gerenciar grupos de objetos relacionados.
+Há duas maneiras de agrupar objetos: criando matrizes de objetos e criando coleções
+de objetos.
+
+-As matrizes são mais úteis para criar e trabalhar com um número fixo de objetos 
+fortemente tipados. Para obter informações sobre matrizes, consulte Matrizes.
+
+-As coleções fornecem uma maneira mais flexível de trabalhar com grupos de objetos.
+ Ao contrário das matrizes, o grupo de objetos com o qual você trabalha pode crescer
+ e reduzir dinamicamente conforme as necessidades do aplicativo são alteradas.
+
+-Uma coleção é uma classe, portanto você deve declarar uma instância da classe antes
+ de adicionar elementos a essa coleção.
+
+Arrays
+
+- O array é uma estrutura de dados que armazena valores do mesmo
+ tipo, com um tamanho fixo. É um conjunto de itens.
+
+1. int[] array = new int[4]
+
+2. int[] array = new int[] {42, 75, 74, 61};
+
+3. string[] nomes = {"Jan", "Fev"};
+
+
+Disposição do Array
+
+Índice
+
+-É a posição de um determinado valor de um array, sempre começando com zero.
+
+1. var elemento = array[0]
+
+2. array[0] = 42 
+
+
+Array Multidemensional
+
+- O array pode possuir mais de uma dimensão:
+
+int[,] array = new int [4,2];
+
+4 = número de linhas
+2 = número de colunas
+
+Acessar um valor: array[1,1]
+
+
+Ordenando Arrays
+
+-Para ordenar um array, existem diversos algoritmos de ordenação,
+diferentes técnicas e casos a serem considerados.
+
+Bubble sort (usa o método de troca/ para pequenas ordenações)
+
+
+Classe Array
+
+-A classe Array é uma classe do C# que nos oferece diversos métodos
+que nos auxiliam a trabalhar com arrays.
+
+Ordenar --> Array.Sort(array);
+Copiar --> Array.Copy(array, arrayDestino, array.Length);
+Existe --> return Array.Exists(array, elemento => elemento > valor);
+TodosMaiorQue --> return Array.TrueForAll(array, elemento => elemento > valor);
+ObterValor --> return Array.Find(array, element => element == valor);
+ObterIndice --> return Array.IndexOf(array, valor);
+RedimensionarArray --> Array.Resize(ref array, novoTamanho);
+Converter Para ArrayString --> return Array.ConvertAll(array, elemento => elemento.ToString());
+
+
+Obs: CW+Tab = Colose.WriteLine
+
+Coleções Genéricas
+
+-No C#, existem classes de coleções que agrupam valores, e essas classes são padronizadas
+para as operações mais comuns, como:
+
+-Ordenação
+-Obter valor por índice
+-Obter valor com expressões
+-Trabalhar com tamanhos dinâmicos
+
+-Uma das grande diferenças entre Array e Lista é que quando vc declara um Array
+você precisa, obrigatoriamente, já passar pra ele o tamanho do seu arrray.
+Caso vc queira aumentar ou diminuir isso fica ao seu cargo.
+
+Já uma lista ou coleção genérica vc não precisa se preocupar com o tamanho dela.
+Ela já faz automaticamente toda a abstração.
+
+Ela fica na System.Collections.Generic
+-Uma coleção genérica é útil quando cada item na coleção tem o mesmo tipo de dados. 
+-Uma coleção genérica impôe tipagem forte, permitindo que apenas o tipo de dados desejado
+ seja adicionado.
+
+Classe:
+Dictionary<TKey,TValue> --> Representa uma coleção de pares chave-valor organizados com base na chave.
+List<T> --> Representa uma lista de objetos que podem ser acessados por índice. Fornece métodos para pesquisar, classificar e modificar listas.
+Queue<T> --> Representa uma coleção de objetos PEPS(primeiro e entrar, primeiro a sair).
+SortedList<TKey,TValue> --> Representa uma coleção de pares chave/valor que são classificados por chave com base na implementação de Icomparer<T> associada.
+Stack<T> --> Representa uma coleção de objetos UEPS (último a entrar, primeiro a sair).
+
+
+Coleções específicas
+
+-As coleções específicas implementam regras para sua ordem de acesso
+e manipulação de seus elementos, são elas:
+
+-Queue (fila): Obedece a ordem FIFO (First In First Out)
+-Stack (Pilha): Obedece a ordem LIFO (Last In First Out)
+
+
+Queue (FILA)
+
+Queue<string> fila = new Queue<string>()
+fila.Enqueue("Leo");
+fila.Enqueue("Vel");
+fila.Enqueue("Ju");
+
+
+Stack (PILHA)
+Stack<string> pilhaLivros = new Stack<string>();
+
+pilhaLivros.Push(".NET");
+pilhaLivros.Push(".DOD");
+pilhaLivros.Push("Código Limpo");
+
+
+Dicionários
+
+-Um dicionário é uma coleção de chave e valor, permitindo que você recupere
+rapidamente seus itens baseado em sua chave.
+
+-O dicionário armazena a sua chave em bash.
+
+-Criação de um dicionário:
+Dictionary<string,string> estados = new Dictionary<string,string>()
+
+-Não pode duplicar a chave
+
+-Ao tentar acessar uma chave que não existe no seu dictionary, ele vai retornar
+uma exceção e vai interromper a execução do código.
+
+-Acessando de maneira segura: TryGetValue ( obtem o valor que deseja e diz se conseguiu obter o valor ou não[boleano])
+
+
+Operações LINQ
+
+-O LINQ (Language-Integrated Query) é uma maneira de você utilizar uma sintaxe
+de consulta padronizada para coleções de objetos.
+
+-O LINQ (consulta integrada à linguagem) é o nome de um conjunto de tecnologias
+ com base na integração de recursos de consulta diretamente na linguagem C#.
+ Tradicionalmente, consultas feitas em dados são expressas como cadeias de caracteres
+ simples sem verificação de tipo no tempo de compilação ou suporte a IntelliSense.
+
+- Além disso, você precisará aprender uma linguagem de consulta diferente para cada
+ tipo de fonte de dados: bancos de dados SQL, documentos XML, vários serviços Web etc.
+
+-métodos: Query e Method syntax
+
+
+Valor mínimo --> arrayNumeros.Min();
+Valor máximo --> arrayNumeros.Max();
+Valor médio --> arrayNumeros.Average();
+Sum --> (somar todos elementos presentes na coleção)
+Distinct --> (retornar uma nova coleção com valores únicos/distintos)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

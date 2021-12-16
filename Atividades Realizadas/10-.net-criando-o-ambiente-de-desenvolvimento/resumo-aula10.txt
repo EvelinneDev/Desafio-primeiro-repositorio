@@ -1,6 +1,6 @@
 [.NET] Criando ambiente de desenvolvimento
 
-dotnet 
+Dotnet 
 
 .NET Framework:
 

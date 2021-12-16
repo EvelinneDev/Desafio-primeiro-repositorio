@@ -1,0 +1,144 @@
+Escalando o negócio com Microsserviços com .NET
+
+Por que Microsserviços?
+Vieram com o intuito de facilitar e agilizar
+
+-Uma abordagem que desenvolve um aplicativo único como uma suite de pequenos serviços…"
+ (Martin Fowler, 2014)
+
+-Em geral, um microserviço é um sistema simples (geralmente uma API) que se comunica
+ através de mecanismos leves (como o HTTP). Estes pequenos sistemas devem ser
+ totalmente autônomos, ou seja, devem possuir sistemas de deploy totalmente
+ independentes e totalmente automáticos
+
+-Microsserviços são uma abordagem arquitetônica e organizacional do desenvolvimento
+ de software na qual o software consiste em pequenos serviços independentes que se
+ comunicam usando APIs bem definidas. 
+
+-Esses serviços pertencem a pequenas equipes autossuficientes.
+
+-As arquiteturas de microsserviços facilitam a escalabilidade e agilizam
+o desenvolvimento de aplicativos, habilitando a inovação e acelerando o 
+tempo de introdução de novos recursos no mercado.
+
+Monolitos
+-serviços grandes/ contexto muito complexo
+-Uma aplicação monolítica é aquele tipo de aplicação na qual toda a base de código
+ está contida em um só lugar, ou seja, todas as funcionalidades estão definidas no
+ mesmo bloco.
+
+Início:
+-rápido e fácil para iniciar
+-infraestrutura simples
+-debug fascinante
+
+Problemas deixados para os decedentes:
+-problemas com merge-conflicts
+-conexões simultâneas TCP é limitada
+-deadlock e concorrência
+-bugs e defeitos colaterais (único ponto de falha)
+-build/ deploy longos pesados
+-baixa escalabilidade
+-agregação de tecnologia
+-demora de aculturamento
+
+-Único ponto de falha: Problema no sistema de newsletters? Não conseguimos fazer 
+o pagamento dos funcionários porque o sistema de folha não funciona
+
+-Baixa escalabilidade: Temos que copiar TODA a stack para escalar horizontalmente
+
+-Base de código gigante: Quanto maior o sistema, maior é a base de código, já que
+ está tudo no mesmo lugar
+
+-Agregação de tecnologia: Viu isso ali em cima né? Pois então, utilizar uma única
+ tecnologia faz com que problemas que seriam resolvidos mais facilmente com outras
+ tecnologias sejam ignorados (o clássico "Quando você tem um martelo, todos os
+ problemas se tornam pregos")
+
+-Desperdício de esforço: Imagine que você tenha que mudar o texto de uma das telas
+ de uma aplicação monolítica de 50.000 linhas, quando você for publicar isso,
+ ela vai ter que ser totalmente recompilada, tudo isso por causa de um texto,
+ será que valeu a pena?
+
+-Demora de aculturamento: Um novo funcionário vai demorar bastante para entender
+ como tudo funciona
+
+Pensando em escalabilidade vertical x horizontal
+
+Escalabilidade:
+
+-A escalabilidade é a possibilidade que uma empresa tem de crescer,
+agregar valor ao seu negócio e atender as demandas dos clientes sem
+aumentar expressivamente os seus custos.
+
+-Sendo assim, quanto mais escalável for uma corporação, maiores são as chances
+ de aumentar os lucros
+
+-De maneira geral, a escalabilidade é a possibilidade da empresa crescer em número 
+de clientes e faturamento, sem precisar aumentar os seus custos mensais.
+Isso ocorre quando você consegue oferecer serviços que interessam ao consumidor,
+ mas que não demandam de uma grande equipe ou muitos equipamentos..
+
+Escalabilidade Vertical:
+
+-Escalabilidade vertical é quando temos que aumentar a capacidade da máquina que
+ estamos utilizando, por exemplo, aumentar a memória RAM ou espaço no HD.
+
+Escalabilidade Horizontal:
+
+-Já a escalabilidade horizontal é quando replicamos a mesma máquina ou serviço N 
+vezes.
+
+
+2001 - Manifesto Ágil
+
+-O Manifesto Ágil: é uma declaração de princípios que fundamentam o desenvolvimento ágil de software.
+
+4 princípios:
+
+-Os indivíduos e suas interações acima de procedimentos e ferramentas;
+-O funcionamento do software acima de documentação abrangente;
+-A colaboração com o cliente acima da negociação e contrato;
+-A capacidade de resposta a mudanças acima de um plano pré-estabelecido;
+
+DevOps
+
+-É uma cultura na engenharia de software que aproxima os desenvolvedores de software
+ (Dev) e os operadores do software / administradores do sistema (Ops),
+-Com característica principal de melhorar a comunicação dos dois papéis dentro de um
+ projeto e defender a automação e monitoramento em todas as fases da construção de um 
+software (desde a integração, teste, liberação para implantação, ao gerenciamento de
+ infraestrutura).
+-Auxiliam empresas no gerenciamento de lançamento de novas versões, padronizando 
+ambientes em ciclos de desenvolvimento menores, frequência de implantação aumentada,
+ liberações mais seguras, em alinhamento próximo com os objetivos de negócio.
+
+
+Ecossistemas de Microsserviços
+
+-Existem alguns itens que são fundamentais para o sucesso das operações dos microsserviços. São eles:  
+
+Estabilidade;  
+Escalabilidade;  
+Padronização;  
+Alta tolerância a falhas;  
+Infraestrutura confiável.  
+
+
+Microsserviços
+ 
+-Dependem apenas um do outro via APIs públicas.
+-Podem (e devem) ser poliglotas em seus stacks.
+-Encapsulam estado(dados) e comportamento(regras de negócios) = Business Capability
+-Possuem deploys independentes
+-Devem ter tratamentos isolados às falhas.
+
+Como dividir um monolito em microsserviços
+
+-A primeira dica é não fazer uma reescrita total da sua aplicação. Ou seja,
+esqueça a ideia de direcionar todos os esforços do time para reescrever a 
+aplicação do zero.
+-Construa uma aplicação de forma incremental, rodando cada novo microsserviço em conjunto da aplicação original.
+-Quando sua aplicação monolítica se tornar ingerenciável, deve-se parar de tornar seu monolito maior.
+-Se você tiver de implementar uma nova funcionalidade, não adicione esse código ao monolito. Ao invés disso,
+ a melhor estratégia é colocar o novo código em um microsserviço próprio para isso.
