@@ -1,0 +1,20 @@
+5/6 Vai ter copa!
+
+class DIO
+{
+  static void Main(string[] args)
+  {
+    string input;
+    while((input = Console.ReadLine()) != null)
+    {
+      int n = Int32.Parse(input);
+      if (n == 0)
+      {
+        Console.WriteLine("vai ter copa!");
+      } else
+      {
+        Console.WriteLine("vai ter duas!");
+      }
+    }
+  }
+}

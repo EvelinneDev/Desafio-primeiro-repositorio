@@ -1,0 +1,26 @@
+2/6 - Quadrado de Pares
+
+using System; 
+
+class DIO 
+{
+
+    static void Main(string[] args) 
+    { 
+        int n = int.Parse(Console.ReadLine());
+
+        for(int i = 2; i <= n; i = i += 2)
+
+      {
+
+        int a = 2;     //escreva o seu código nos espaços em branco
+
+        int resultado = i * i;
+
+        Console.WriteLine(i + "^" + a + " = " + resultado);
+
+      }
+
+    }
+
+}   
