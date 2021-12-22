@@ -16,12 +16,12 @@ Adicionei o atributo Nota.
 //Métodos
 método this.Nota = nota;
 
-//retorno
+//Retorno
 retorno += "Nota do Público: " + this.Nota + Environment.NewLine;
 
 //Enum Genero
 
-adicionei mais gêneros:
+Adicionei mais gêneros:
 
 Comedia_Romantica = 14,
 Crime = 15,
