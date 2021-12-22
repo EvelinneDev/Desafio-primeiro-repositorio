@@ -4,3 +4,25 @@
 
 Projeto para o BootCamp Decola Tech da Avanade.
 
+Acompanhando a aula "Criando um APP simple de cadastro de séries em .NET",
+desenvolvi esse projeto em .NET e contribuí com minha versão adicionando um
+novo atributo chamado "Nota" em referência à avaliação que o público dá aos Seriados.
+
+Alterações:
+
+//Atributos
+Adicionei o atributo Nota.
+
+//Métodos
+método this.Nota = nota;
+
+//retorno
+retorno += "Nota do Público: " + this.Nota + Environment.NewLine;
+
+//Enum Genero
+
+adicionei mais gêneros:
+
+Comédia_Romantica = 14,
+Crime = 15,
+Esporte = 16
