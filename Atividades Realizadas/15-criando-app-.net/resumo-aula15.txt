@@ -1,0 +1,39 @@
+Criando um APP simples de cadastro de séries em .NET
+
+CRUD
+
+-Create / Criar
+-Read / Ler
+-Update / Atualizar
+-Delete / Excluir
+
+Classes Abstratas
+
+-Classes que podem conter métodos abstratos
+-Não pode ser instanciada.
+
+Método abstrato
+
+-É um método que é declarado, porém não contém implementação.
+
+Interfaces
+
+-É muito semelhante a uma classe abstrata, mas não possui atributos
+ e não pode definir como os métodos devem ser implementados.
+-Em vez disso, é simplesmente uma lista de métodos que devem ser implementados.
+
+
+Criando um cadastro
+
+terminal
+
+criar o projeto --> dotnet new console -n DIO.Series
+abrir no visual studio code ---> code DIO.Series
+
+No Visual Studio Code
+Criar uma pasta de interfaces e outra de classes
+
+https://github.com/elizarp/dio-dotnet-poo-lab-2
+
+Eliezer.zarpelao
+https://linktr.ee/eliezer.zarpelao
