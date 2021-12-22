@@ -23,6 +23,6 @@ retorno += "Nota do Público: " + this.Nota + Environment.NewLine;
 
 adicionei mais gêneros:
 
-Comédia_Romantica = 14,
+Comedia_Romantica = 14,
 Crime = 15,
 Esporte = 16
