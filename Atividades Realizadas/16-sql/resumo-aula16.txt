@@ -1,0 +1,859 @@
+Introdução a SQL Server
+
+O que é SQL?
+
+-SQL (Structured Query Language) é a linguagem padrão universal para manipular 
+bancos de dados relacionais através dos SGBDs. 
+
+-Isso significa que todos os SGBDRs (Sistema de Gerenciamento de Banco de Dados Relacionais)
+ oferecem uma interface para acessar o banco de dados utilizando a linguagem SQL,
+ embora com algumas variações.
+
+-A "Linguagem Estruturada de Consultas" (SQL, traduzida para o português) é utilizada para
+ interagir com o SGBD e executar várias tarefas como inserir e alterar registros,
+ criar objetos no banco de dados, gerenciar usuário, consultar informações, controlar
+ transações, etc.
+
+-A linguagem SQL é dividida em 4 agrupamentos de acordo com o tipo de operação a ser 
+executada no banco de dados. 
+
+	 DML (Data Manipulation Language, ou Linguagem de Manipulação de Dados
+	 e português), 
+	 DDL (Data Definition Language, ou Linguagem de Definição de Dados em português),
+	 DCL (Data Control Language, ou Linguagem de Controle de Dados em português) e
+	 DTL (Data Transaction Language, ou Linguagem de Transação de Dados em português).
+
+Por que armazenar dados?
+
+-Armazenamento de dados se refere às facilidades 
+que o SQL Server disponibiliza para manter arquivos em sua base de dados.
+
+-O armazenamento de dados é importante para todas as empresas, pois ajuda
+o processo de tomada de decisão, favorece o atendimento ao público em geral
+e, também, oferece vantagens competitivas quando usado da forma correta.
+
+
+O que são bancos de dados?
+
+-Bancos de dados ou bases de dados são conjuntos de arquivos relacionados entre
+si com registros sobre pessoas, lugares ou coisas. 
+
+-São coleções organizadas de dados que se relacionam de forma a criar algum sentido
+(informação) e dar mais eficiência durante uma pesquisa ou estudo científico.
+
+-São de vital importância para empresas e, há mais de duas décadas, 
+se tornaram a principal peça dos sistemas de informação e segurança. 
+
+-Normalmente existem por vários anos sem alterações em sua estrutura 
+sistemática.
+
+
+O que são SGBDs?
+
+-Um Sistema de Gerenciamento de Banco de Dados (SGBD) — do inglês Data Base 
+Management System (DBMS) 
+
+-São softwares que padrozinam os bancos de dados, é uma interface entre dados e sistemas
+
+-É o sistema de software responsável pelo gerenciamento de um ou mais bancos de dados.
+
+-Seu principal objetivo é retirar da aplicação cliente a responsabilidade de gerenciar
+o acesso, a persistência, a manipulação e a organização dos dados.
+
+-O SGBD disponibiliza uma interface para que seus clientes possam incluir, alterar ou 
+consultar dados previamente armazenados.
+
+Em bancos de dados relacionais a interface é constituída pelas APIs (Application Programming
+Interface) ou drivers do SGBD, que executam comandos na linguagem SQL (Structured Query Language).
+
+
+
+Tipos de bancos de dados:
+
+-Relacionais
+
+SQL Server
+Oracle
+MySQL
+
+
+Relacionais
+
+-Hoje os bancos de dados relacionais são os mais comuns no mercado, como em sistemas ERP
+e CRM, por exemplo. 
+
+-Tal popularidade é conquistada pela facilidade da armazenagem e pela confiabilidade das informações.
+
+-Ele funciona da seguinte maneira: os dados são armazenados em formatos tubulares, ou seja,
+o dado fica na coluna, enquanto a descrição fica em linhas e atributos.
+
+-A importância dos bancos de dados relacionais é constituída a partir dos pilares ACID,
+que é a sigla referente a atomicidade, consistência, isolamento e durabilidade. 
+
+-Por fim, uma outra característica importante é sua linguagem, que é baseada no SQL
+(Structured Query Language). É justamente por isso que a categoria relacional é 
+considerada fácil, pois a inserção dos dados é fácil e recuperável. 
+
+-Vale ressaltar que a maioria dos tipos de banco de dados usam o SQL.
+
+---------
+Representação banco relacional
+
+E-comerce --> produtos <----> Vendas <----> Clientes
+
+cliente
+id:int
+Nome:vachar
+Cpf: char
+Ativos: bit
+---------
+
+
+
+Não-relacionais
+
+-Utilizamos o não-relacional toda vez que precisamos trabalhar com dados que não podem ser
+inseridos em formato tabela, como imagens, vídeos e gráficos. 
+
+-Ele tem uma alta performance e por essa razão é muito valorizado no mercado,
+todos os registros são feitos em um mesmo lugar.
+
+-Em decorrência disso, os bancos de dados não-relacionais dispensam a utilização de um 
+sistema de relacionamento, diferentemente de um banco de dado relacional. 
+
+-Sua linguagem oficial é a NoSQL (do inglês, Not Only SQL — Não Apenas SQL).
+
+-Por ser um sistema que absorve alguns conteúdos de maior complexidade, o não-relacional
+demanda um sistema de aprovação, que permite identificar qual tipo de informação é mais
+relevante para o negócio. 
+
+-NoSQL
+
+MongoDB
+Neo4j
+Firebase
+
+
+
+
+ACID
+
+-A sigla ACID significa Atomicity, Consistency, Isolation, Durability,
+ ou em português
+-Atomicidade, Consistência, Isolamento e Durabilidade
+
+-Diz respeito a um conjunto de propriedades em transações de bancos de dados que
+são importantes para garantir a validade dos dados mesmo que ocorram erros durante
+o armazenamento ou problemas mais graves no sistema, como crashes ou problemas físicos
+em um servidor.
+
+
+Atomicidade
+
+-A atomicidade é uma propriedade que garante que cada transação seja tratada como uma
+entidade única, a qual deve ser executada por completo ou falhar completamente. 
+
+-Desta forma, todas as operações da transação devem ser executadas com sucesso para que 
+a transação tenha sucesso.
+
+
+Consistência dos dados
+
+-A propriedade da consistência permite assegurar que uma transação somente leve o banco
+de dados de um estado válido a outro, mantendo a estabilidade do banco. 
+
+-Os dados que são gravados devem sempre ser válidos, de acordo com regras definidas,
+e isso inclui qualquer operação considerada, como triggers, constraints (restrições),
+procedimentos armazenados, ou outras que determinem a validade dos dados inseridos.
+
+
+Isolamento
+
+-É muito comum que transações sejam executadas de forma concorrente, ou seja, de forma
+que várias tabelas sejam lidas ou alteradas por vários usuários simultaneamente.
+
+-Com a propriedade do isolamento a execução concorrente permite deixar o banco de dados
+no mesmo estado em que ele estaria caso as transações fossem executadas em sequência.
+
+
+Durabilidade
+
+-A propriedade da durabilidade garante que uma transação, uma vez executada (efetivada),
+permanecerá neste estado mesmo que haja um problema grave no sistema, como travamento
+de sistema ou falta de energia elétrica no servidor. 
+
+-Para isso, as transações finalizadas são gravadas em dispositivos de memória permanente
+(não-volátil), como discos rígidos, de modo que os dados estejam sempre disponíveis, 
+mesmo que a instância do BD seja reiniciada.
+
+---------------------------
+
+SQL
+
+Criar tabelas
+
+O SQL Server Management Studio oferece muitas maneiras de trabalhar com tabelas.
+Podemos criar novas tabelas utilizando o recurso New Table no SQL Server Management
+Studio ou o comando Create Table.
+
+
+No SQL Server Management Studio criamos uma tabela seguindo esses passos:
+
+-No SQL Server Management Studio, conecte-se à instância de servidor que contém o banco de dados.
+Verifique se tem permissão para usar o comando Create Table no banco de dados e a permissão Alter
+no esquema em que a tabela está sendo criada.
+-No Object Explorer, expanda o nó Databases e então selecione um banco de dados.
+-Expanda novamente a visão para mostrar os nós dos seus recursos.
+-Para criar uma nova tabela, clique com o botão direito do mouse no nó Tables e então selecione
+New Tables do menu de atalho. 
+-Em seguida, acesse o Table Designer no SQL Server Management Studio.
+
+-Para executar qualquer comando no SQL Server, escreva o determinado comando na tela de
+consultas do centro da tela e logo acima, na barra de ferramentas,
+clique no botão Execute ou simplesmente aperte F5
+
+---------------------------
+
+
+Comandos básicos em SQL - INSERT, UPDATE, DELETE e SELECT
+
+
+
+Inserindo dados: INSERT SQL
+
+
+
+O comando para inclusão no banco de dados é o INSERT
+
+-----------
+INSERT INTO nome_tabela (listas-de-campos); [pode omitir o into ou colunas]
+VALUES (lista_dados)
+
+--OU
+
+INSERT INTO nome_tabela  VALUES (lista_dados)
+----------
+
+onde:
+-Nome_tabela: nome da tabela no qual será inserido os dados.
+-Lista-de-campos: nome das colunas que receberão os valores.
+-Lista-dados: valores que serão inseridos na tabela.Estes campos devem estar na mesma ordem
+ descrita em lista-de-campos, todos separados por vírgula. 
+-Se for utilizado um comando SELECT o mesmo deve retornar a mesma quantidade de colunas com
+ os mesmos tipos de dados especificados em lista-de-campo.
+
+
+
+
+Atualizando dados: UPDATE SQL
+
+
+O comando para atualizar registros é UPDATE, que tem a seguinte sintaxe:
+
+---------------
+Listagem 4: Sintaxe do comando update.
+UPDATE nome_tabela
+SET CAMPO = "novo_valor"
+WHERE CONDIÇÃO
+---------------
+
+Onde:
+
+Nome_tabela: nome da tabela que será modificada
+Campo: campo que terá seu valor alterado
+Novo_valor: valor que substituirá o antigo dado cadastrado em campo
+Where: Se não for informado, a tabela intera será atualizada
+Condição: regra que impõe condição para execução do comando
+
+
+
+
+
+Removendo dados: DELETE SQL
+
+
+O comando utilizado para apagar dados é o DELETE.
+
+-----------
+DELETE FROM nome_tabela
+WHERE condição
+-----------
+Onde:
+
+Nome_tabela: nome da tabela que será modificada
+Where: cláusula que impõe uma condição sobre a execução do comando
+
+
+
+
+
+SELECT
+
+
+-O comando select é bastante simples e, serve para você mostrar os dados da tabela.
+ Sua sintaxe pode ser utilizado de algumas formas, como:
+
+
+SELECT * FROM NOME_DA_TABELA;
+
+Exemplo:
+
+SELECT * FROM clientes;
+
+
+Nota 1: o asterisco indica que você deseja mostrar todos os campos, ou seja, id, nome,
+ email e cidade (conforme a tabela do SQL Server que você deseja exibir os registros).
+
+
+Exemplo 2:
+
+SELECT nome, email FROM clientes;
+
+Nota 2: neste caso, você está indicando que deseja mostrar somente nome e e-mail.
+ Isso é interessante, pois a consulta é executa de forma mais rápida,
+ já que você está trazendo menos informações da tabela.
+
+
+
+
+Sub-consultas: SELECT SQL
+
+Uma sub-consulta é uma instrução SELECT aninhada dentro de outra instrução SELECT,
+INSERT, DELETE ou UPDATE. Veja abaixo alguns exemplos de sintaxe:
+
+-Comparação [ANY|SOME|ALL] (instrução sql)
+-Expressão [NOT] IN (instrução sql)
+-Expressão [NOT] EXISTS (instrução sql)
+-Os predicados ANY e SOME, sinônimos, são utilizados para recuperar registro na consulta
+principal que satisfaçam a comparação com qualquer registro da sub-consulta.
+
+
+
+INSERT
+
+-O comando insert é bastante simples de ser utilizado. Sua sintaxe é composta da seguinte
+ forma:
+
+INSERT INTO NOME_DA_TABELA (CAMPOS_QUE_DESEJA_INSERIR_DADOS) VALUES (VALORES_DOS_CAMPOS).
+
+Exemplo:
+
+INSERT INTO clientes (nome, email, empresa) VALUES ('Júnior', 'junior@dominio.com','RL System');
+
+Nota 1: observe que não foi informado o campo id, já que o mesmo é AUTO_INCREMENT.
+
+Nota 2: o comando values são os valores que correspondem aos campos que você informou
+ no primeiro parentese, ou seja, os dados que serão inseridos. É necessário seguir a 
+ordem que você especificou os campos.
+
+Nota 3: no values, foi utilizado aspas simples já que os valores são STRINGS, isso é
+ necessário porque campos do tipo VARCHAR ou CHAR são considerados Strings nos banco de
+ dados.
+
+
+
+UPDATE
+
+-O comando update possui a sintaxe muito similar ao do INSERT, mas é utilizada para 
+atualizar registros do banco de dados.
+
+UPDATE NOME_DA_TABELA SET campo1 = valor1, campo2 = valor2.
+
+Exemplo:
+
+UPDATE clientes SET nome = 'Rafael', email = 'contato@rlsystem.com.br';
+
+Nota 1: observe que a cada campo que você deseja atualizar é necessário colocar uma virgula.
+ E os campos só podem ser indicados depois do comando SET.
+
+Nota 2: o comando update não deve ser executado desta maneira, ou então, irá atualizar todos
+ os registros para o nome Rafael e e-mail contato@rlsystem.com.br. Isso acontece porque o
+ comando WHERE não foi indicado. Quando o mesmo não é indicado o comando UPDATE atualizará
+ todos os registros daquela tabela.
+
+Assim, o ideial é que você indique o registro da tabela que deseja atualizar, conforme 
+mostra abaixo.
+
+UPDATE clientes SET nome = 'Rafael', email = 'contato@rlsystem.com.br' WHERE id = 1;
+
+No exemplo acima, somente será atualizado o registro que conter o id 1.
+
+
+DELETE
+
+O comando delete nunca deve ser utilizado sem a clasula WHERE. Caso contrário, irá deletar
+ todos os registros da tabela. Sempre que você deseja apagar um registro, provalvelmente
+ quer apagar um em espeficio. Assim, sempre é importante usar o WHERE, conforme o exemplo
+ abaixo.
+
+DELETE FROM NOME_DA_TABELA WHERE id = VALOR_DO_ID;
+
+Exemplo:
+
+DELETE FROM clientes WHERE id = 1;
+
+Nota 1: desta forma, você estará excluindo o registro que conter o id 1.
+
+
+
+Pesquisador de Objetos
+
+
+-SQL Server Management Studio fornece recursos para gerenciar objetos em instâncias do Mecanismo
+de Banco de Dados, Serviços de análise, Integration Servicese Reporting Services.
+
+Benefícios do Pesquisador de Objetos:
+-O Pesquisador de Objetos fornece uma interface de usuário hierárquica e gerencia os objetos em
+cada instância do SQL Server. 
+-O painel de detalhes do Pesquisador de Objetos apresenta uma 
+exibição tabular dos objetos de instância e a capacidade de procurar objetos específicos.
+ 
+-Os recursos do Pesquisador de Objetos variam, dependendo ligeiramente do tipo de servidor,
+mas normalmente incluem recursos de desenvolvimento de bancos de dados e recursos de gerenciamento
+de todos os tipos de servidores.
+
+
+
+Objetos do SQL Server – A versão 2005 do SQL Server nos oferece diferentes tipos de objetos,
+como descrevemos abaixo:
+
+
+- Database – Os objetos do sistema são criados dentro de uma estrutura lógica que
+ corresponde ao objeto Database.
+
+ Dentro do objeto Database são criados os objetos que fazem parte
+ do sistema, ou seja, uma estrutura lógica formada por dois tipos de arquivo,
+ um responsável pelo armazenamento dos dados e outro que armazena as transações feitas.
+
+ Ex: Criando um database chamado Clientes.
+ Para isso, abro o SQL Server, crio uma nova query, 
+ digito a instrução CREATE DATABASE Clientes e aperto F5 ou clico em Execute.
+
+-É criada por meio da instrução CREATE DATABASE.
+
+- Table – Os dados do sistema são inclusos neste objeto de duas dimensões,
+ que é formado por linhas e colunas.
+
+- Constraint, Default e Rule – Consistem em regras usadas para implementar a 
+consistência e a integridade dos dados. Mais sobre elas em artigos futuros.
+
+- Data Type e User Defined Data Type – Os dados são armazenados no disco sob um
+ formato representado pelo datatype. Um datatype deverá ser atribuído  a cada coluna de uma tabela.
+
+- View – Este objeto nos oferece uma visualização lógica dos dados de uma tabela,
+ de modo que diversas aplicações possam compartilhá-la.
+
+- Index – São objetos responsáveis pela otimização de acesso aos dados de uma tabela,
+ com o objetivo de agilizar determinadas pesquisas de dados.
+
+- Procedure – Neste objeto, encontramos um bloco de comandos Transact-SQL, responsável
+ por uma determinada tarefa. Sua lógica pode ser compartilhada por várias aplicações.
+ Muito utilizado atualmente em praticamente todo tipo de empresa.
+
+- Trigger – Como a Procedure, este objeto também possui um bloco de comandos Transact-SQL.
+ É criado sobre uma tabela e ativado no momento da execução dos comandos UPDATE, INSERT e/ou DELETE.
+ 
+- Function – Neste objeto, temos um bloco de comandos Transact-SQL responsável por uma determinada tarefa.
+ Como a Procedure, sua lógica pode ser compartilhada por N aplicações.
+ Importante dizer que uma função SEMPRE retornará um valor.
+
+Obs: Os objetos Procedure, Trigger e Function são processados rapidamente, pois seu código tende
+ a ficar compilado na memória. Isso acontece porque estes objetos são executados no servidor de dados.
+
+
+
+---------------------------
+
+
+Group BY
+
+-A cláusula GROUP BY agrupa linhas baseado em semelhanças entre elas.
+-Basicamente divide o resultado da pesquisa em grupos;
+–Com o uso do GROUP BY, é possível agruparmos diversos registros com base em uma ou mais
+ colunas de uma tabela. 
+-Por exemplo, os produtos de uma loja podem ser agrupados pelo preço (maior valor, menor
+ valor), pelo tipo (livros, filmes, séries), etc. É isso que muitas lojas de e-commerce fazem.
+
+-Importante ressaltar que a cláusula GROUP BY é comumente usada em conjunto com as seguintes
+ funções:
+
+
+·	  SUM() – Função que permite a soma dos registros;
+
+·         AVG() – Função que permite o cálculo da média dos valores;
+
+·         COUNT() – Função usada para contar os registros;
+
+·         MAX() – Função que retorna o maior valor de um conjunto de valores;
+
+·         MIN() – Função que retorna o menor valor de um conjunto de valores;
+
+
+---------------------------
+
+
+Chave primária
+
+-A chave primária, ou primary key, é o conceito mais básico relacionado à organização em
+um banco de dados. 
+
+-Pode ser única ou composta(pode escrever mais de uma coluna);
+
+-Não pode ser duplicada;
+
+-Toda tabela possuirá uma, e somente uma, chave primária.
+ 
+-Essa chave é utilizada como identificador único da tabela, sendo representada por aquele
+ campo (ou campos) que não receberá valores repetidos.
+
+-Chaves primárias não podem ser nulas;
+
+-Cada registro na tabela deve possuir uma, e somente uma, chave primária;
+
+-Normalmente, chaves primárias são incrementadas automaticamente pelo banco de dados,
+ou seja, não há necessidade de passarmos esse valor em um INSERT. 
+Entretanto, essa é uma opção configurada na criação da base de dados que não é obrigatória.
+Nos casos em que ela (incremento automático) não é definida, é preciso garantir que não 
+haverá valores repetidos nessa coluna;
+
+-São as chaves para o relacionamento entre entidades ou tabelas da base de dados.
+
+-Assim haverá na tabela relacionada uma referência a essa chave primária (que será,
+ na tabela relacionada, a chave estrangeira).
+
+-Vale ressaltar que a chave primária é essencial para o funcionamento da base de dados,
+representando um registro único que facilita buscas e garante que cada valor dentro
+da tabela será diferente do outro.
+
+
+
+Chave estrangeira
+
+-A chave estrangeira, ou foreign key, é um conceito ligeiramente diferente.
+
+-Ela não diz respeito, especificamente, a uma tabela, mas sim a um relacionamento entre 
+tabelas. 
+
+-De forma sucinta, a chave estrangeira é uma referência em uma tabela a uma chave primária
+ de outra tabela. 
+
+-Uma chave estrangeira sempre será uma cópia da chave primária, de mesmo tipo e quantidade.
+
+
+Diferentemente da chave primária, a CHAVE ESTRANGEIRA:
+
+-Pode ser nula (NOT NULL);
+-É um campo em uma tabela que faz referência a um campo que é chave primária em outra tabela;
+-É possível ter mais de uma (ou nenhuma) em uma tabela.
+
+
+---------------------------
+
+Qual a diferença entre where e havin?
+
+-Ambos funcionam como se fossem um if, ou seja, filtram linhas do banco de dados.
+
+-O WHERE funciona direto na linha, já o HAVING funciona em resultados de agregadores de
+ linhas, o mais usado é com o GROUP BY.
+
+-A cláusula WHERE é aplicada primeiro às linhas individuais nas tabelas ou objetos com
+ valor de tabela no painel Diagrama. Apenas as linhas que atendem os critérios na
+ cláusula WHERE são agrupadas. 
+
+-A cláusula HAVING é aplicada às linhas no conjunto de resultados.
+
+-Somente os grupos que atendem os critérios de HAVING são exibidos na saída da consulta.
+Você pode aplicar apenas uma cláusula HAVING em colunas que também são exibidas na cláusula
+GROUP BY ou em uma função de agregação.
+
+---------------------------
+
+TIPOS DE DADOS
+
+
+Baseados em Caracteres:
+
+
+- Char(n) – Trata-se de um datatype que aceita como valor qualquer dígito, 
+sendo que o espaço ocupado no disco é de um dígito por caractere. 
+É possível utilizar até 8 mil dígitos.
+
+- Varchar(n) – Também aceita como valor qualquer dígito e o espaço ocupado em disco 
+é de um dígito por caractere. Permite usar também no máximo 8 mil dígitos.
+ A diferença pro Char, é que o Varchar geralmente é usado quando não sei o 
+tamanho fixo de um campo.
+
+- Text – Qualquer dígito pode ser usado neste datatype, sendo ocupado 1 byte por
+ caractere, o equivalente a 2.147.483.647 bytes.
+
+
+**********
+
+Qual a diferença entre VARCHAR e CHAR ???
+
+-CHAR e VARCHAR são tipos de dados caractere, a diferença é que CHAR é um tipo de dado de
+ comprimento fixo e VARCHAR é de comprimento variável.
+
+-Usamos CHAR quando os tamanhos que desejamos armazenar na coluna de uma tabela são de
+ tamanho consistentes e semelhantes. Exemplo: Número de telefone, CEP, CPF, CGC, etc.
+
+-O tipo CHAR possui um tamanho fixo, assim se você tentar armazenar um valor maior que o 
+definido numa coluna do tipo CHAR ele será truncado.
+
+**********
+
+
+
+Baseados em Caracteres Unicode:
+
+ 
+- Nchar(n) – Neste datatype, pode usar qualquer dígito, sendo ocupados 2 bytes a cada
+ caractere. É possível usar até 8 mil bytes.
+
+- Nvarchar(n) – Igual ao tipo anterior, com a única diferença que uso esse tipo 
+  quando não sei o tamanho fixo de um campo. 2 bytes são ocupados a cada caractere.
+  É possível usar até 8 mil bytes.
+
+- Ntext – Também aceita qualquer digito, 2 bytes são ocupados a cada caractere.
+  Podem ser usados até 1.073.741.823 bytes.
+
+
+
+Baseados em Numéricos Inteiros:
+
+ 
+- Bigint – Aceita valores entre -2^63 e 2^63-1, sendo que esse datatype ocupa 8 bytes.
+
+- Int – Os valores aceitos aqui variam entre -2^31 a 2^31-1.            ocupa 4 bytes.
+
+- Smallint – Aceita valores entre -32768 até 32767 e                    ocupa 2 bytes.
+
+- Tinyint – Os valores aceitos aqui variam entre 0 e 255,               ocupa 1 byte.
+
+- Bit – É um tipo de dado inteiro (conhecido também como booleano), cujo valor pode
+ corresponder a NULL, 0 ou 1. Podemos converter valores de string TRUE e FALSE em
+ valores de bit, sendo que TRUE corresponde a 1 e FALSE a 0.
+
+
+
+Baseados em Numéricos Exatos:
+
+ 
+- Decimal(P,S) – Os valores aceitos variam entre -10^38-1 e 10^38-1, sendo que o espaço
+ ocupado varia de acordo com a precisão. Se a precisão for de 1 a 9, o espaço ocupado é
+ de 5 bytes. Se a precisão é de 10 a 19, o espaço ocupado é de 9 bytes, já se a precisão
+ for de 20 a 28, o espaço ocupado é de 13 bytes, e se a precisão for de 29 a 38, o espaço
+ ocupado é de 17 bytes.
+
+- Numérico(P,S) – Considerado um sinônimo do datatype decimal, o númerico também permite
+ valores entre -10^38-1 e 10^38-1 e o espaço ocupado é o mesmo do anterior.
+
+
+Baseados em Numéricos Aproximados:
+
+ 
+- Float[(n)] – O mesmo que double precision quando o valor de n é 53, este datatype aceita
+ valores entre -1.79E + 308 e 1.79E + 308. O espaço ocupado varia de acordo com o valor de
+ n. Se esse valor estiver entre 1 e 24, a precisão será de 7 dígitos, sendo que o espaço
+ ocupado será de 4 bytes. Se o valor de n estiver entre 25 e 53, sua precisão será de 15
+ dígitos, assim sendo o espaço ocupado será de 8 bytes.
+
+- Real – Este datatype é similar ao float(n) quando o valor de n é 24. Os valores aceitos
+ variam entre -3.40E + 38 e 3.40E + 38. Esse datatype ocupa 4 bytes.
+
+
+Baseados em Valores Numéricos Monetários:
+
+ 
+- Money – Este datatype aceita valores entre -2^63 e 2^63-1, sendo que 8 bytes são ocupados.
+
+- Smallmoney – É possível usar valores entre -2^31 e 2^31-1, sendo que 4 bytes são ocupados.
+
+
+
+Baseados em Data e Hora:
+
+ 
+- Datetime – Permite o uso de valores entre 1/1/1753 e 31/12/9999. Este datatype ocupa 8 bytes
+ e sua precisão atinge 3.33 milisegundos.
+
+- Smalldatetime – Aceita o uso de valores entre 1/1/1900 e 06/06/2079, sendo que sua precisão
+ é de 1 minuto e ocupa 4 bytes em disco.
+
+
+Baseados em Binários:
+
+ 
+- Binary[(n)] – Este datatype representa os dados que serão usados no formato binário.
+ O espaço ocupado é de n+4 bytes, sendo que n pode variar entre 1 e 8000 bytes.
+
+- Varbinary[(n)] – Aqui também é usado o formato binário, o espaço ocupado e a variação
+ de n é igual ao anterior.
+
+- Image – O formato binário também é usado aqui, sendo que o espaço ocupado é de 2^31-1 bytes
+ ou 2.147.483.647.
+
+ 
+Baseados em Tipos de Dados Especiais:
+
+ 
+- Uniqueidentifier – O formato hexadecimal é usado para o armazenamento de dados binários,
+ sendo que este datatype ocupa 16 bytes.
+
+- Timestamp – Um valor binário é gerado pelo SQL Server, sendo que esse datatype
+ ocupa 8 bytes.
+
+- Bit – Este datatype pode apresentar 0, 1 ou NULL, como valor, sendo ocupado 1 byte.
+ Também utilizado como um tipo de dado int.
+
+- Sql_Variant – Os valores aqui podem ser de qualquer datatype, sendo que é possível
+ armazenar até 8016 bytes.
+
+- Cursor – Datatype usado somente quando trabalhamos com variáveis.
+
+- Table – Datatype usado somente quando trabalhamos com variáveis de memória.
+
+- Xml – Por este datatype, podemos armazenar fragmentos de documentos XML em um banco
+ de dados SQL. Estes fragmentos correspondem à instâncias XML que não possuem um determinado
+ elemento de nível superior. Essas instâncias são armazenadas quando criamos variáveis e
+ colunas com datatype XML. O espaço máximo ocupado deve ser de 2GB
+
+-----------------------------------------
+
+
+Normalização de banco de dados
+
+
+-É um conjunto de regras que visa, principalmente, 
+a organização de um projeto de banco de dados para reduzir a redundância de dados,
+aumentar a integridade de dados e o desempenho. 
+
+- Para normalizar o banco de dados, deve-se examinar as colunas (atributos) de uma entidade
+ e as relações entre entidades (tabelas), com o objetivo de se evitar anomalias observadas
+ na inclusão, exclusão e alteração de registros.
+
+-Não deve haver um conjunto de colunas repetido, ou conjunto de informações em apenas
+ uma propriedade.
+
+-não pode haver informações duplicadas que dependam da chave primária.
+
+-----------------------------------------
+
+
+JOIN
+
+O que é e para que serve Join em SQL?
+
+-Uma cláusula JOIN em SQL, correspondente a uma operação de junção em álgebra relacional,
+ combina colunas de uma ou mais tabelas em um banco de dados relacional.
+
+-Ela cria um conjunto que pode ser salvo como uma tabela ou usado da forma como está.
+
+-Um JOIN é um meio de combinar colunas de uma (auto-junção) ou mais tabelas, usando valores
+comuns a cada uma delas. 
+
+-O SQL padrão ANSI especifica cinco tipos de JOIN:
+ INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN e CROSS JOIN.
+
+-Como um caso especial, uma tabela (tabela base, visão ou tabela juntada) pode se juntar
+ a si mesma em uma auto-união (self-join).
+
+-Em um banco de dados relacional, os dados são distribuídos em várias tabelas lógicas.
+ Para obter um conjunto completo e significativo de dados, é necessário consultar dados
+ dessas tabelas usando junções (JOINs).
+
+-Vimos que os JOINs na linguagem SQL são muito importantes, eles nos permite criar consultas
+ mais completas e mais complexas de forma simples, utilizando testes lógicos
+ (condição de junção), e são de extrema importância quando trabalhamos com bancos de dados.
+
+
+
+INNER JOIN
+
+
+-A cláusula INNER JOIN compara cada linha da tabela A com as linhas da tabela B para 
+encontrar todos os pares de linhas que satisfazem a condição de junção.
+
+-Se a condição de junção for avaliado como TRUE, os valores da coluna das linhas
+ correspondentes das tabelas A e B serão combinados em uma nova linha e incluídos
+ no conjunto de resultados.
+
+
+LEFT JOIN
+
+
+-Retorna todos os registros da tabela esquerda e os registros correspondentes da
+ tabela direita
+
+-Se uma linha da tabela “esquerda” A não tiver nenhuma linha correspondente da tabela 
+“direita” B, a consulta irá combinar os valores da coluna da linha da tabela “esquerda” 
+A com NULL para cada valor  da coluna da tabela da “direita” B que não satisfaça a condição
+de junto (FALSE).
+
+-Em resumo, a cláusula LEFT JOIN retorna todas as linhas da tabela “esquerda” A e as linhas
+ correspondentes ou valores NULL da tabela “esquerda” A.
+
+
+
+RIGHT JOIN
+
+
+-Retorna todos os registros da tabela direita e os registros correspondentes da tabela 
+esquerda.
+
+-A RIGHT JOIN combina dados de duas ou mais tabelas. A RIGHT JOIN começa a selecionar dados
+ da tabela “direita” B e a corresponder às linhas da tabela “esquerda” A.
+
+-A RIGHT JOIN retorna um conjunto de resultados que inclui todas as linhas da tabela
+ “direita” B, com ou sem linhas correspondentes na tabela “esquerda” A. 
+ Se uma linha na tabela direita B não tiver nenhuma linha correspondente da tabela
+ “esquerda” A, a coluna da tabela “esquerda” A no conjunto de resultados será nula
+ igualmente ao que acontece no LEFT JOIN.
+
+
+
+FULL JOIN
+
+
+-Retorna todos os registros quando houver uma correspondência na tabela esquerda ou direita.
+
+-A cláusula FULL JOIN retorna todas as linhas das tabelas unidas, correspondidas ou não,
+ ou seja, você pode dizer que a FULL JOIN combina as funções da LEFT JOIN e da RIGHT JOIN.
+ FULL JOIN é um tipo de junção externa, por isso também é chamada junção externa completa.
+
+-Quando não existem linhas correspondentes para a linha da tabela esquerda, as colunas da 
+ tabela direita serão nulas. Da mesma forma, quando não existem linhas correspondentes para
+ a linha da tabela direita, a coluna da tabela esquerda será nula.
+
+
+
+CROSS JOIN
+
+
+-A cláusula CROSS JOIN retorna todas as LINHAS das tabelas por CRUZAMENTO, ou seja, para
+ cada linha da tabela esquerda queremos todos os linhas da tabelas direita ou vice-versa. 
+
+-Ele também é chamado de produto cartesiano entre duas tabelas. Porém, para isso é preciso
+ que ambas tenham o campo em comum, para que a ligação exista entre as duas tabelas.
+
+-Para entender melhor, pense que temos um banco de dado, onde temos uma tabela FUNCIONÁRIO
+ e uma tabela CARGO, assim poderíamos ter vários cargos para um único FUNCIONÁRIO, e usando
+ o CROSS JOIN podemos trazer todos os CARGOS de todos os FUNCIONÁRIOS.
+
+
+-----------------------------------------
+NULL (aceita nulos, é ausência de valor)
+NOT NULL (não aceita nulos)
+
+alt + f1 (para ver mais informações da tabela)
+
+gatedate (retorna data e hora atuais)
+
+-----------------------------------------
+
+Fonte: 
+Aula
+wikipédia
+devmedia
+http://www.bosontreinamentos.com.br/
+https://docs.microsoft.com/pt-br/sql/sql-server/?view=sql-server-ver15

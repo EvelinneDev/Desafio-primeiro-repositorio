@@ -1,0 +1,72 @@
+Modelando um banco de dados na prática com SQL SERVER
+
+create table planetas(
+	idPlaneta int not null,
+	Nome varchar(50) not null,
+	Rotacao float not null,
+)
+GO (indicando o final de uma instrução e o início de outra)
+
+alter table Planetas add constraint pk_Planetas Primary Key (idPlaneta);
+(adicionar tabela) (add regra)(nome da regra)(chave primária)(coluna onde esta a regra)
+
+
+Criar tabelas
+
+clicar com botão direito >novo > tabela
+
+Informações: nome da coluna | Tipo de Dados | Permitir nulos
+
+
+
+Definir chave primária > salvar > nome da tabela
+
+Adicionar chave estrangeira:
+alter table pilotos add constraint fk_pilotos_planetas foreign key (IdPlaneta)
+references planetas (IdPlaneta)
+
+A constraint DEFAULT é utilizada para inserirmos um valor padrão em uma coluna
+no MySQL. Esse valor padrão é inserido automaticamente nos registros, se 
+nenhum valor for especificado para a coluna em questão.
+
+forms ( abre o formulário/aplicação)
+
+
+select * from Pilotos
+(consulta, selecionando)(quer visualizar todas as colunas da tabela)(de onde)(nome da tabela)
+
+
+filtRar:
+cláusula where
+select * from Pilotos where Nome = "Darth Vader"
+
+
+eliminar espaço ao lado do nome:
+função ltrim (esquerda left)
+select * from Pilotos where ltrim(Nome) = ltrim('Darth Vader')
+
+função like:
+procurar uma parte do nome
+select * from Pilotos where Nome like '%Vader' (termina com vader)
+					'Darth%'(começa com darth)
+					%Darth%(coemça ou termina)
+
+alt + f1 (traz o resumo da tabela, todos os detalhes)
+
+Gatdate (função do sql, que retorna a data atual)
+
+
+Count
+
+A função SQL COUNT é utilizada para determinar o valor total de registros que
+atenda a uma condição específica. Se nenhuma condição for definida na
+instrução SQL, o resultado será com base em todos os registros da tabela.
+
+SELECT COUNT(nome_coluna)
+FROM nome_tabela
+WHERE condição
+
+boas práticas:
+-colocar as coisas no plural
+-nomes mais claros possíveis
+
