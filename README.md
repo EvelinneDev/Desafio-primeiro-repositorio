@@ -24,4 +24,20 @@ O Decola Tech Avanade é o programa de Estágio da Avanade no qual os futuros ta
 
 ##### Primeiros passos com .NET
 
+##### Programando com orientação a Objeto com C#
+
+#### Construtores, Propriedades, Delegates e Eventos em .NET
+
+#### Criando o ambiente de desenvolvimento
+
+#### Fundamentos e coleções de LINQ com .NET
+
+#### Introdução a microserviços com .NET
+
+#### Introdução a Design Patterns com .NET
+
+#### Programando em C# Desafios
+
+#### SQL Server
+
 
